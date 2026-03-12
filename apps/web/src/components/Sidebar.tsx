@@ -41,7 +41,7 @@ import { useLocation, useNavigate, useParams } from "@tanstack/react-router";
 import { useAppSettings } from "../appSettings";
 import { isElectron } from "../env";
 import { APP_STAGE_LABEL, APP_VERSION } from "../branding";
-import { isMacPlatform, newCommandId, newProjectId, newThreadId } from "../lib/utils";
+import { cn, isMacPlatform, newCommandId, newProjectId, newThreadId } from "../lib/utils";
 import { useStore } from "../store";
 import { isChatNewLocalShortcut, isChatNewShortcut, shortcutLabelForCommand } from "../keybindings";
 import { derivePendingApprovals, derivePendingUserInputs } from "../session-logic";
@@ -1366,14 +1366,14 @@ export default function Sidebar() {
               Search projects and threads
             </label>
             <div className="flex items-center w-full relative">
-              <Input
+              <input
                 id="sidebar-search-input"
                 type="text"
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
                 placeholder="Search projects/threads"
                 aria-label="Search projects and threads"
-                className={searchValue && "pr-6"}
+                className="border-0 border-b border-primary focus:ring-0 focus:border-accent focus:outline-none"
                 autoComplete="off"
               />
               {searchValue && (
