@@ -1202,7 +1202,7 @@ export default function Sidebar() {
                     type="button"
                     aria-label="Add project"
                     aria-pressed={shouldShowProjectPathEntry}
-                    className="inline-flex size-5 items-center justify-center rounded-md text-muted-foreground/60 transition-colors hover:bg-accent hover:text-foreground"
+                    className="inline-flex size-5 items-center justify-center rounded-md text-muted-foreground/60 transition-colors hover:bg-accent hover:text-foreground cursor-pointer"
                     onClick={handleStartAddProject}
                   />
                 }
@@ -1355,7 +1355,7 @@ export default function Sidebar() {
                                       />
                                     }
                                     showOnHover
-                                    className="top-1 right-1 size-5 rounded-md p-0 text-muted-foreground/70 hover:bg-secondary hover:text-foreground"
+                                    className="top-1 right-1 size-5 rounded-md p-0 text-muted-foreground/70 hover:bg-secondary hover:text-foreground cursor-pointer"
                                     onClick={(event) => {
                                       event.preventDefault();
                                       event.stopPropagation();
@@ -1453,7 +1453,7 @@ export default function Sidebar() {
                                         }
                                       }}
                                     >
-                                      <div className="flex min-w-0 flex-1 items-center gap-1.5 text-left">
+                                      <div className="flex min-w-0 flex-1 items-center gap-1.5 text-left cursor-pointer">
                                         {prStatus && (
                                           <Tooltip>
                                             <TooltipTrigger
